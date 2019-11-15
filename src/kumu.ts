@@ -2,7 +2,7 @@ import fs from 'fs-extra'
 import slugify from 'slugify';
 import uuid from 'uuid'
 
-const kumu_slugify = (x:any):string => {
+export const kumu_slugify = (x:any):string => {
 	return slugify(x,{lower:true})
 }
 // --------------------------------------------------------------------------
@@ -53,6 +53,8 @@ export interface KumuElement extends KumuEntity {
 
 	addOutbound:(conn:KumuConnection) => void
 	addInbound:(conn:KumuConnection) => void
+	findInboundOfType:(type:string) => KumuConnection[]
+	findOutboundOfType:(type:string) => KumuConnection[]
 
 }
 
@@ -103,8 +105,9 @@ export class SimpleKumuEntity implements KumuEntity {
 			const slug = kumu_slugify(key)
 			if ( ! ex.has(slug) ) {
 				const value = elt[key]
-				if (value != '')
+				if (value != '') {
 					result[key] = value
+				}
 			}
 		}
 
@@ -148,6 +151,25 @@ export class SimpleKumuElement extends SimpleKumuEntity implements KumuElement  
 
 		addInbound(conn:KumuConnection) {
 			this.inbound[conn.guid] = conn
+		}
+
+		findOutboundOfType(type:string) {
+			const results = [] as KumuConnection[]
+			for(let key in this.outbound) {
+				const conn = this.outbound[key]
+				if(conn.type.name == type)
+					results.push(conn)
+			}
+			return results
+		}
+		findInboundOfType(type:string) {
+			const results = [] as KumuConnection[]
+			for(let key in this.inbound) {
+				const conn = this.inbound[key]
+				if(conn.type.name == type)
+					results.push(conn)
+			}
+			return results
 		}
 }
 
@@ -266,9 +288,9 @@ export class KumuModel
 	locateElementByLabel(label:string):KumuElement {
 		const result = this.elements[kumu_slugify(label)]
 		if(!result) {
-			console.log("FAILED TO FIND",label,"=>",kumu_slugify(label))
-			for(let x in this.elements)
-				console.log(x)
+			console.log("locateElementByLabel - FAILED TO FIND",label,"=>",kumu_slugify(label))
+			//for(let x of Object.keys(this.elements).sort())
+			//	console.log(x)
 		}
 		return result
 	}
@@ -293,19 +315,31 @@ export class KumuModel
 }
 // --------------------------------------------------------------------------
 
-export async function kumuloader(eltfile:string,connfile:string):Promise<KumuModel> {
+export async function kumuloader(eltfile:string,connfile:string,failFast = false):Promise<KumuModel> {
 	const elts = JSON.parse(await fs.readFile(eltfile))
 	const conns = JSON.parse(await fs.readFile(connfile))
 	const model = new KumuModel()
 
-	console.log("Building Elements");
+	//console.log("Building Elements");
 	for(let e of elts) {
-		new SimpleKumuElement(e,model)
+		try {
+			new SimpleKumuElement(e,model)
+		}
+		catch(E) {
+			if(failFast) throw E;
+			else { console.log("Trouble w/ element:",JSON.stringify(e)) }
+		}
 	}
 
-	console.log("Building Connections");
+	//console.log("Building Connections");
 	for(let c of conns) {
-		new SimpleKumuConnection(c,model)
+		try {
+			new SimpleKumuConnection(c,model)
+		}
+		catch(E) {
+			if(failFast) throw E;
+			else { console.log("Trouble w/ connection:",JSON.stringify(c)) }
+		}
 	}
 
 	return model

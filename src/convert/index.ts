@@ -1,51 +1,29 @@
 import fs from 'fs-extra'
-import { kumuloader } from './kumu'
-import { tiddlyloader } from './tiddly'
+import { kumuloader } from '../kumu'
+import { tiddlyloader } from '../tiddly'
 //import { TiddlerFileBase } from './tiddly'
+import { schemas } from '../schema'
+import slugify from 'slugify'
 
-import { KumuModel,KumuElement } from './kumu'
-import { TiddlerFileBase,NodeTiddler } from './tiddly'
+import { KumuModel,KumuElement } from '../kumu'
+import { TiddlerFileBase,NodeTiddler } from '../tiddly'
 
-import { KumuConnectionType,KumuElementType } from './kumu'
-import { EdgeTypeTiddler,NodeTypeTiddler } from './tiddly'
+import { KumuConnectionType,KumuElementType } from '../kumu'
+import { EdgeTypeTiddler,NodeTypeTiddler } from '../tiddly'
 
-import { TiddlyMap,SimpleTiddlyMap,TiddlerViewFiles } from './tiddly'
+import { TiddlyMap,SimpleTiddlyMap,TiddlerViewFiles } from '../tiddly'
 
-interface Context {
-	model:KumuModel
-	tiddly:TiddlerFileBase
-}
+import { Context } from '../context'
 
-function createNodeTiddlerFromElement(elt:KumuElement,ctx:Context):NodeTiddler
-{
 
-	const edgemap:any = {}
-	for(let o in elt.outbound) {
-		const c=elt.outbound[o]
-		edgemap[o] = {
-			to:c.to.guid,
-			type:c.type.name
-		}
-	}
-
-	const fields=new Map<string,string>()
-	fields['tags']=elt.tags
-	fields['element.type']=elt.type.name
-	fields['tmap.id']=elt.guid
-	fields['tmap.edges']=JSON.stringify(edgemap)
-	const result = ctx.tiddly.createNodeTiddler({
-		title:elt.label,
-		fields:fields,
-		text:elt.description
-	})
-	return result
-}
+import { createNodeTiddlerFromElement } from './create-node-tiddler'
 
 function createEdgeTypeTiddlerFromConnectionType(type:KumuConnectionType,ctx:Context):EdgeTypeTiddler
 {
 	const result = ctx.tiddly.createEdgeTypeTiddler(type.parts)
 	return result
 }
+
 function createNodeTypeTiddlerFromElementType(type:KumuElementType,ctx:Context):NodeTypeTiddler
 {
 	const result = ctx.tiddly.createNodeTypeTiddler(type.parts)
@@ -77,7 +55,7 @@ async function convert(eltfile:string,connfile:string,filebase:string) {
 	console.log("Load Tiddly");
 	const tiddly = await tiddlyloader(filebase)
 
-	const ctx:Context = { model,tiddly }
+	const ctx:Context = { model,tiddly,schemas }
 
 	const map = new SimpleTiddlyMap("Everything")
 	const map2 = new SimpleTiddlyMap("Nothing")
@@ -100,6 +78,8 @@ async function convert(eltfile:string,connfile:string,filebase:string) {
 			mapmap[tname] = new SimpleTiddlyMap(tname)
 		mapmap[tname].nodes.add(tiddler.tmap_id)
 	}
+
+	return
 
 	console.log("Convert Kumu Connection Types -> Edge Type Tiddlers");
 	const edgeTypes:EdgeTypeTiddler[] = []
@@ -154,7 +134,7 @@ async function convert(eltfile:string,connfile:string,filebase:string) {
 
 export = (args:string[]) => {
 
-	console.log("start",args);
+	console.log("start, args=",args);
 	convert('elements.json','connections.json','output').then(()=>{
 		console.log("done");
 	})

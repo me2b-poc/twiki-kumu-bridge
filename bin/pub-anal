@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+
+require('../dist/anal/pub.js')(process.argv.slice(2));

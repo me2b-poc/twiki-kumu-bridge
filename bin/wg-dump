@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+
+require('../dist/anal/wgdump.js')(process.argv.slice(2));
