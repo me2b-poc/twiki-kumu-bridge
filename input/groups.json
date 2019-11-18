@@ -1,0 +1,27 @@
+[
+    {
+        "Category": "legal document",
+        "Description": "Certification",
+        "Label": "The Ethics Certification Program for Autonomous and Intelligent Systems (ECPAIS)",
+        "Parent Org": "The Ethics Certification Program for Autonomous and Intelligent Systems (ECPAIS)",
+        "Purpose": "governance",
+        "URL": "https://standards.ieee.org/industry-connections/ecpais.html"
+    },
+    {
+        "Description": "Portability format JSON structure",
+        "Label": "The Data Portability Cooperation",
+        "Parent Org": "The Data Portability Cooperation",
+        "URL": "https://www.dataportabilitycooperation.org/"
+    },
+    {
+        "Description": "Three or four times a year we\u2019ll be selecting a book that helps us deepen our knowledge on how we build a more equitable community and hosting an event to discuss the topic further. Book Club is open to all and we look forward to seeing you at a future event. Stay in the loop and enter your email below to be notified when we schedule our next book club event.",
+        "Label": "Tech Equity Book Club",
+        "Parent Org": "Tech Equity",
+        "People": "Chair: David Snelling",
+        "URL": "https://techequitycollaborative.org/events/book-club/"
+    },
+    {
+        "Label": "COEL Working Group",
+        "URL": "http://www.oasis-open.org/committees/coel/"
+    }
+]

@@ -3,28 +3,28 @@ import { mappers } from '../mappers'
 
 export const inbound : any = {
   "Name" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.label()
   },
   "About" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.skip()
   },
   "URL" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Website')
   },
   "Publication Type" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('SubType')
   },
   "Sponsoring Org" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Parent Org')
   },
   "Author(s)/Editor(s)" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.publicationAuthors()
   },
   "Audience" : {
     "kumu": mappers.default('')
   },
   "Sponsoring Organization" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.publicationOrgs()
   },
   "Working Group" : {
     "kumu": mappers.default('')

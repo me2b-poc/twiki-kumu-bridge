@@ -12,7 +12,6 @@ function writeElement(elt:KumuElement,ctx:Context)
 {
 	const tb = {
 		fields:{},
-		body:''
 	} as TiddlerBuilder
 
 	createEdgeMap(elt,tb)

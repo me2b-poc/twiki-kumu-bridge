@@ -339,7 +339,7 @@
         "Type": "Author"
     },
     {
-        "From": "OneTurst",
+        "From": "OneTrust",
         "To": "Annual Privacy Forum",
         "Type": "Sponsor"
     },
@@ -624,7 +624,7 @@
     },
     {
         "From": "ID Theft Prevention and ID Management Standards Panel (IDSP)",
-        "To": "ANCI",
+        "To": "ANSI",
         "Type": "Organization for Group"
     },
     {
@@ -3269,7 +3269,7 @@
     },
     {
         "From": "North American Security Products Organization",
-        "To": "ANCI",
+        "To": "ANSI",
         "Type": "Connection"
     },
     {
@@ -3825,7 +3825,7 @@
         "Type": "Organization for Group"
     },
     {
-        "From": "ANCI",
+        "From": "ANSI",
         "To": "ISO/IEC",
         "Type": "General Member"
     },

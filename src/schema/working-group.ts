@@ -4,19 +4,19 @@ import { mappers } from '../mappers'
 
 export const inbound : any = {
   "Name" : {
-    "kumu": mappers.string("Label")
+    "kumu": mappers.label()
   },
   "Description" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.skip()
   },
   "URL" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Website')
   },
   "Category" : {
-    "kumu": mappers.workingGroupCategory()
+    "kumu": mappers.string('SubType')
   },
   "Parent Org" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Parent Org')
   },
   "People" : {
     "kumu": mappers.default('')
@@ -25,10 +25,10 @@ export const inbound : any = {
     "kumu": mappers.default('')
   },
   "Date Founded" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Start Date')
   },
   "Date Ended" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('End Date')
   },
   "Purpose": {
     "kumu": mappers.default('')

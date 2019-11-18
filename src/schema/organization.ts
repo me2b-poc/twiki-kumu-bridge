@@ -3,18 +3,30 @@ import { mappers } from '../mappers'
 
 export const inbound : any = {
   "Org Name": {
-    "kumu": mappers.default('')
+    "kumu": mappers.label()
   },
   "About": {
-    "kumu": mappers.default('')
+    "kumu": mappers.skip()
   },
   "Website": {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Website')
   },
   "Org Type": {
+    "kumu": mappers.string('SubType')
+  },
+  "Sector": {
+    "kumu": mappers.default('')
+  },
+  "Purpose": {
+    "kumu": mappers.default('')
+  },
+  "Activities": {
     "kumu": mappers.default('')
   },
   "Parent Org": {
+    "kumu": mappers.string('Parent Org')
+  },
+  "Me2B Relationship": {
     "kumu": mappers.default('')
   },
   "Key People": {
@@ -29,20 +41,11 @@ export const inbound : any = {
   "Tags": {
     "kumu": mappers.default('')
   },
-  "Github Repo": {
-    "kumu": mappers.default('')
-  },
   "Date Founded": {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Start Date')
   },
   "Date Ended": {
-    "kumu": mappers.default('')
-  },
-  "Sector": {
-    "kumu": mappers.default('')
-  },
-  "Purpose": {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('End Date')
   },
   "Digital Harms Addressed": {
     "kumu": mappers.default('')
@@ -50,22 +53,13 @@ export const inbound : any = {
   "Tech Focus": {
     "kumu": mappers.default('')
   },
-  "Activities": {
-    "kumu": mappers.default('')
-  },
   "Status": {
-    "kumu": mappers.default('')
-  },
-  "Me2Be Relationship": {
     "kumu": mappers.default('')
   },
   "Annual Budget": {
     "kumu": mappers.default('')
   },
   "Funding": {
-    "kumu": mappers.default('')
-  },
-  "Me2B Relationship": {
     "kumu": mappers.default('')
   },
   "Scope": {
@@ -113,20 +107,77 @@ export const schema : JSONSchema6 = {
     	"type": "string",
     	"enum": [
     		"Coalition or Network",
-    		"Consumer support",
     		"Government Department",
     		"Research Lab or Center",
-    		"School",
+    		"University",
     		"Standards Development Organization",
-    		"Startup",
-    		"Supra National Government",
-			"Trade Association",
-			"Sub Government"
+    		"TradeAssociation",
+    		"University Department",
+			"Non Governmental Organization",
+			"Part of Supra-National Government",
+			"Government",
+			"Cooperative"
+    	]
+    },
+    "Sector": {
+    	"type": "string",
+    	"enum": [
+    		"non-profit",
+    		"for-profit",
+    		"government",
+    		"academic"
+    	]
+    },
+    "Purpose": {
+      "type": "string",
+      "enum": [
+        "education",
+        "human rights",
+        "usability",
+        "tech interoperability",
+        "governance",
+        "certification and compliance",
+        "transparency and accountability",
+        "consumer support",
+        "health care"
+      ]
+    },
+    "Activities": {
+    	"type": "string",
+    	"enum": [
+    		"advocacy",
+    		"certification",
+    		"compliance auditing",
+    		"events and convening",
+    		"formal training and classes",
+    		"funding",
+    		"incubation",
+    		"movement building",
+    		"outreach",
+    		"policy development",
+    		"publication",
+    		"regulation",
+    		"research",
+    		"software development",
+    		"standard development",
+        "service provider"
     	]
     },
     "Parent Org": {
     	"type": "string"
     },
+    "Me2B Relationship": {
+    	"type": "string",
+    	"enum": [
+          "Certification Candidate",
+          "collaborating org",
+          "member",
+          "potential collaborator",
+          "out of scope",
+          "funder",
+          "affiliates"
+        	]
+	   },
     "Key People": {
     	"type": "string",
     	"enum": [
@@ -134,7 +185,8 @@ export const schema : JSONSchema6 = {
     		"CEO or ED",
     		"Other Leadership",
     		"Working group chair",
-    		"Technical editor"
+        "Technical editor",
+        "Employee"
     	]
     },
     "Audience": {
@@ -164,10 +216,6 @@ export const schema : JSONSchema6 = {
 			"type": "string"
 			}
     },
-    "Github Repo": {
-    	"type": "string",
-    	"format": "url"
-    },
     "Date Founded": {
     	"type": "string",
     	"format": "date"
@@ -176,27 +224,6 @@ export const schema : JSONSchema6 = {
     	"type": "string",
     	"format": "date"
     },
-    "Sector": {
-    	"type": "string",
-    	"enum": [
-    		"non-profit",
-    		"for-profit",
-    		"government",
-    		"academic"
-    	]
-    },
-    "Purpose": {
-    	"type": "string",
-    	"enum": [
-    		"education",
-    		"human rights",
-    		"usability",
-    		"tech interoperability",
-    		"governance",
-    		"certification and compliance",
-    		"transparency and accountability"
-    	]
-	},
 	"Digital Harms Addressed": {
 		"type": "string",
     	"enum": [
@@ -228,26 +255,6 @@ export const schema : JSONSchema6 = {
     		"Data Storage"
     	]
     },
-    "Activities": {
-    	"type": "string",
-    	"enum": [
-    		"advocacy",
-    		"certification",
-    		"compliance auditing",
-    		"events and convening",
-    		"formal training and classes",
-    		"funding",
-    		"incubation",
-    		"movement building",
-    		"outreach",
-    		"policy development",
-    		"publication",
-    		"regulation",
-    		"research",
-    		"software development",
-    		"standard development"
-    	]
-    },
     "Status": {
     	"type": "string",
     	"enum": [
@@ -256,33 +263,12 @@ export const schema : JSONSchema6 = {
     		"merged"
     	]
     },
-    "Me2Be Relationship": {
-    	"type": "string",
-    	"enum": [
-    		"potential collaborator",
-    		"collaborating org",
-    		"certification dandidate or awardee",
-    		"member",
-    		"out of scope"
-    	]
-	},
 	"Annual Budget": {
     	"type": "string"
 	},
 	"Funding": {
     	"type": "string"
 	},
-    "Me2B Relationship": {
-    	"type": "string",
-    	"enum": [
-    		"certification candidate or awardee",
-    		"collaborating org",
-    		"potential collaborator",
-    		"out of scope",
-    		"funder",
-    		"affiliates"
-    	]
-    },
     "Scope": {
     	"type": "string",
     	"enum": [

@@ -33,6 +33,8 @@ export interface TiddlerData {
 	guid?:string
 	fields?:Map<string,string>
 	text?:string
+	element_type?:string
+	element_subtype?:string
 }
 
 export interface TiddlyMap {
@@ -113,6 +115,7 @@ export class SimpleNodeTiddler extends SimpleTiddler implements NodeTiddler
 	tmap_id:string
 	tmap_edges: string
 	element_type:string
+	element_subtype?:string
 	wiki_text:string
 	fields:Map<string,string>
 
@@ -122,7 +125,8 @@ export class SimpleNodeTiddler extends SimpleTiddler implements NodeTiddler
 		this.fields = data.fields || new Map<string,string>()
 		this.tmap_id = this.fields['tmap.id'] || ''
 		this.tmap_edges = this.fields['tmap.edges'] || ''
-		this.element_type = this.fields['element.type'] || undefined
+		this.element_type = data.element_type || 'undefined'
+		this.element_subtype = data.element_subtype
 		this.wiki_text = data.text || ""
 		this.sorted_keys = []
 		for(let k in this.fields)
@@ -131,19 +135,22 @@ export class SimpleNodeTiddler extends SimpleTiddler implements NodeTiddler
 	}
 
 	tiddlerdir():string {
-		const typepart = this.fields['element.type']
-		if(!typepart)
+		if(!this.element_type)
 			return this.base.nodes
 		else
-			return path.join(this.base.nodes,typepart)
+			if(!this.element_subtype)
+				return path.join(this.base.nodes,this.element_type)
+			else
+				return path.join(this.base.nodes,this.element_type,slugify(this.element_subtype,{lower:true}))
 	}
 
 	tiddlerdata() {
 		let field_data = ""
 		for (let k of this.sorted_keys) {
-			field_data = field_data + k + ":" + this.fields[k] + "\n"
+			if(this.fields[k] !== undefined)
+				field_data = field_data + k + ":" + this.fields[k] + "\n"
 		}
-		return super.tiddlerdata() + field_data + "\n" + this.wiki_text
+		return super.tiddlerdata() + field_data + "\n" + this.wiki_text + "\n"
 	}
 }
 

@@ -7,12 +7,11 @@ import { KumuModel,KumuElement } from '../kumu'
 import { TiddlerFileBase,NodeTiddler } from '../tiddly'
 
 export interface TiddlerBuilder {
-	title:string
 	schema:any
 	inbound:any
 	fields:any
-	body:any
-
+	type:any,
+	subtype:any
 	edgemap:any
 }
 
@@ -64,13 +63,13 @@ import { buildInboundMapper } from '../schema'
 
 export function configureType(elt:KumuElement,tb:TiddlerBuilder)
 {
-	tb.fields['element.type']=elt.type.name
-	const type = tb.fields['element.type']
-	const schema=schemas[type]
+	tb.type = elt.type.name
+	const schema=schemas[tb.type]
 	if(!schema) {
-		console.log("Doh! - mismatch, can't find",type)
+		console.log("Doh! - mismatch, can't find",tb.type)
 	}
 	else {
+		tb.subtype = elt.fields['SubType']
 		tb.schema = schema
 		tb.inbound = buildInboundMapper(schema,'kumu')
 		if(!tb.inbound)
@@ -93,7 +92,6 @@ export function createNodeTiddlerFromElement(elt:KumuElement,ctx:Context):NodeTi
 {
 	const tb = {
 		fields:{},
-		body:''
 	} as TiddlerBuilder
 
 	createEdgeMap(elt,tb)
@@ -101,13 +99,13 @@ export function createNodeTiddlerFromElement(elt:KumuElement,ctx:Context):NodeTi
 	populateSchema(elt,tb)
 	tb.fields['tmap.id']=elt.guid
 	tb.fields['tmap.edges']=JSON.stringify(tb.edgemap)
-	tb.body = elt.description
-	tb.title = elt.label
 
 	const result = ctx.tiddly.createNodeTiddler({
-		title:tb.title,
+		title:elt.label,
 		fields:tb.fields,
-		text:tb.body
+		text:elt.description,
+		element_type:tb.type,
+		element_subtype:tb.subtype
 	})
 	return result
 }

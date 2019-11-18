@@ -3,19 +3,19 @@ import { mappers } from '../mappers'
 
 export const inbound : any = {
   "Name" : {
-    "kumu": mappers.string("Label")
+    "kumu": mappers.label()
   },
   "Description" : {
-    "kumu": mappers.string("Description")
+    "kumu": mappers.skip()
   },
   "Website" : {
-    "kumu": mappers.url("Website")
+    "kumu": mappers.string("Website")
   },
   "Category" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('SubType')
   },
   "Host Organization" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.connectionIfExists('convenor')
   },
   "People" : {
     "kumu": mappers.default('')
@@ -23,7 +23,7 @@ export const inbound : any = {
   "Audience" : {
     "kumu": mappers.default('')
   },
-  "Partners / Host Sponsor Venue" : {
+  "Partners" : {
     "kumu": mappers.default('')
   },
   "Working Group" : {
@@ -36,7 +36,7 @@ export const inbound : any = {
     "kumu": mappers.default('')
   },
   "Date" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.default('Start Date')
   },
   "Location(s)": {
     "kumu": mappers.default('')
@@ -105,7 +105,7 @@ export const schema : JSONSchema6 = {
           "creators"
         ]
     },
-    "Partners / Host Sponsor Venue" : {
+    "Partners" : {
         "type": "string",
         "description": ""
     },

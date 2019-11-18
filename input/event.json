@@ -1,0 +1,42 @@
+[
+    {
+        "Description": "ThingsCon is a global community & event platform for IoT practitioners. Our mission is to foster the creation of a human-centric & responsible Internet of Things (IoT).",
+        "Name": "ThingsCon",
+        "Website": "https://thingscon.com"
+    },
+    {
+        "Description": "A computer science conference with a cross-disciplinary focus that brings together researchers and practitioners interested in fairness: accountability: and transparency in socio-technical systems.",
+        "Host Organization": "ACM Fairness: Accountability: and Transparency",
+        "Name": "ACM Fairness: Accountability: and Transparency",
+        "Website": "https://fatconference.org/"
+    },
+    {
+        "Name": "Data Governance Design Conference",
+        "Speakers": "Governingdata.org",
+        "Website": "https://www.governingdata.org/"
+    },
+    {
+        "Name": "Auditing Algorithms From the Outside: Methods and Implications",
+        "Website": "https://auditingalgorithms.wordpress.com"
+    },
+    {
+        "Name": "Workshop on Data and Algorithmic Transparency",
+        "Website": "http://datworkshop.org"
+    },
+    {
+        "Name": "Algorithms and Explanations",
+        "Website": "https://www.law.nyu.edu/centers/ili/events/algorithms-and-explanations"
+    },
+    {
+        "Name": "Algorithms and Accountability Conference",
+        "Website": "https://www.law.nyu.edu/centers/ili/AlgorithmsConference"
+    },
+    {
+        "Name": "Governing Algorithms A conference on computation: automation: and control",
+        "Website": "https://governingalgorithms.org"
+    },
+    {
+        "Name": "Workshop on Trustworthy Algorithmic Decision-Making",
+        "Website": "http://trustworthy-algorithms.org"
+    }
+]

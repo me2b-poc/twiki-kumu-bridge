@@ -79,8 +79,6 @@ async function convert(eltfile:string,connfile:string,filebase:string) {
 		mapmap[tname].nodes.add(tiddler.tmap_id)
 	}
 
-	return
-
 	console.log("Convert Kumu Connection Types -> Edge Type Tiddlers");
 	const edgeTypes:EdgeTypeTiddler[] = []
 	for(let slug in model.connectionTypes) {

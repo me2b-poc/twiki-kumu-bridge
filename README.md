@@ -2,6 +2,7 @@
 Utilities for bridging between Tiddlywiki and Kumu
 
 ```
+nvm use stable
 npm install
 ./go.sh
 ```

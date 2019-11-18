@@ -1,0 +1,328 @@
+[
+    {
+        "Audience": "Audience",
+        "Category": "Publication Type",
+        "Description": "About",
+        "Digital Harms Addressed": "Digital Harms Addressed",
+        "Frequency?": "Volume Frequency",
+        "Github Profile": "Github Profile",
+        "Label": "Name",
+        "License": "License",
+        "Location(s)": "Jurisdiction",
+        "Parent Org": "Sponsoring Org",
+        "People": "Author(s)/Editors",
+        "Purpose": "Purpose",
+        "Sector": "Sector",
+        "Start Date": "Date",
+        "Status": "Status",
+        "Tags": "TAGS",
+        "Tech Focus": "TechFocus",
+        "URL": "URL",
+        "Version or Edition": "Version or Edition",
+        "Working group": "Working group"
+    },
+    {
+        "Audience": "Audience",
+        "Category": "Publication Type",
+        "Description": "About",
+        "Digital Harms Addressed": "Digital Harms Addressed",
+        "Frequency?": "Volume Frequency",
+        "Github Profile": "Github Profile",
+        "Label": "Name",
+        "License": "License",
+        "Location(s)": "Jurisdiction",
+        "Parent Org": "Sponsoring Org",
+        "People": "Author(s)/Editors",
+        "Purpose": "Purpose",
+        "Sector": "Sector",
+        "Start Date": "Date",
+        "Status": "Status",
+        "Tags": "TAGS",
+        "Tech Focus": "TechFocus",
+        "URL": "URL",
+        "Version or Edition": "Version or Edition",
+        "Working group": "Working group"
+    },
+    {
+        "Category": "Glossary",
+        "Label": "Good ID Glossary",
+        "Parent Org": "Good ID",
+        "URL": "https://www.good-id.org/en/"
+    },
+    {
+        "Category": "report",
+        "Label": "RDR Corporate Accountability Index",
+        "Parent Org": "Ranking Digital Rights",
+        "URL": "RDR Corporate Accountability Index"
+    },
+    {
+        "Category": "Terms",
+        "Label": "Creative Common licensing terms",
+        "Parent Org": "Creative Commons",
+        "URL": "https://creativecommons.org/share-your-work/"
+    },
+    {
+        "Audience": "government workers",
+        "Category": "report",
+        "Description": "In April 2017 we convened a workshop of stakeholders from across academia: business and regulation to consider developments and directions related to \"consentful\" use of personal data. This report summarises and sysnthesises our discussions from those two days as a means of encouraging conversation and collaboration: and acting as a roadmap for the development of a digital economy that puts individuals in control. Five Pillars Five 'pillars' are crucial to the development of a consentful digital economy; developments are required in all five: and they reinforce (or weaken) one another.",
+        "Label": "Building a Consentful Economy: A report on Developments and Trends relevant to building consent-based digital services.",
+        "Me2Be Relationship": "Content source for Me2B Certification?",
+        "Parent Org": "Meaningful Consent",
+        "Status": "Completed: Inactive?",
+        "URL": "http://www.meaningfulconsent.org/reports/2017/consentful_economy/"
+    },
+    {
+        "Category": "legal document",
+        "Description": "Open Legal document repository",
+        "Label": "Docracy",
+        "Parent Org": "Docracy",
+        "URL": "https://www.docracy.com/"
+    },
+    {
+        "Category": "Certification",
+        "Label": "The Ethics Certification Program for Autonomous and Intelligent Systems (ECPAIS)",
+        "Parent Org": "The Ethics Certification Program for Autonomous and Intelligent Systems (ECPAIS)",
+        "URL": "https://standards.ieee.org/industry-connections/ecpais.html"
+    },
+    {
+        "Category": "Glossary",
+        "Description": "Free Software Definition",
+        "Label": "Free Software Foundation",
+        "Parent Org": "Free Software Foundation",
+        "People": "Richard Stallman",
+        "URL": "https://www.fsf.org/resources/hw/endorsement/respects-your-freedom"
+    },
+    {
+        "Category": "Legal Document",
+        "Description": "GNU GPL",
+        "Label": "Free Software Foundation",
+        "Parent Org": "Free Software Foundation",
+        "People": "Richard Stallman",
+        "URL": "https://www.fsf.org/resources/hw/endorsement/respects-your-freedom"
+    },
+    {
+        "Category": "report",
+        "Description": "The diversity problems of the AI industry and the issues of bias in AI systems tend to be considered separately. In this report we suggest that they are two sides of the same problem: issues of discrimination in the workforce and in system building are deeply related. Moreover: tackling the challenges of bias within technical systems requires addressing workforce diversity: and vice versa. Our research points to new ways of understanding the relationships between these complex problems: which can open up new pathways to redressing the current imbalances and harms.\nDrawing on a thorough review of existing literature and current research working on issues of gender: race: class: and artificial intelligence: this pilot study examines the scale of AI\u2019s current diversity crisis and possible paths forward. It represents the first stage of a multi-year project examining the intersection of gender: race and power in AI.",
+        "Label": "DISCRIMINATING SYSTEMS:  Gender: Race: and Power in AI",
+        "Parent Org": "AI Now Institute",
+        "People": "Sarah Myers West: Meredith Whittaker: Kate Crawford:",
+        "URL": "https://ainowinstitute.org/ discriminatingsystems.html.",
+        "Working group": "West:"
+    },
+    {
+        "Activities": "Data Portability",
+        "Category": "report",
+        "Description": "The Data Portability Cooperation\nThe DPC is an inclusive working group led by GSMA and major European Telecommunications operators Orange: Telef\u00f3nica and Deutsche Telekom to build the first specification of personal data portability for the telco industry.\nThe initiative is open by nature and encourage other telecommunication operators to join the discussions within the GSMA or the other industries to contribute by contacting us",
+        "Label": "The Data Portability Cooperation WhitePaper",
+        "URL": "https://www.dataportabilitycooperation.org/assets/Telecoms_Secured_Data_Hub.pdf"
+    },
+    {
+        "Activities": "Data Portability",
+        "Category": "specification",
+        "Description": "The Data Portability Cooperation\nThe DPC is an inclusive working group led by GSMA and major European Telecommunications operators Orange: Telef\u00f3nica and Deutsche Telekom to build the first specification of personal data portability for the telco industry.\nThe initiative is open by nature and encourage other telecommunication operators to join the discussions within the GSMA or the other industries to contribute by contacting us",
+        "Label": "The Data Portability Cooperation Specification",
+        "URL": "https://www.dataportabilitycooperation.org/specification.html"
+    },
+    {
+        "Category": "Trust Framework: Code of Conduct",
+        "Description": "Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.",
+        "Label": "Trust Framework & Code of Conduct",
+        "Parent Org": "CARIN Alliance",
+        "URL": "https://www.carinalliance.com/our-work/trust-framework-and-code-of-conduct/"
+    },
+    {
+        "Description": "There are few consumer or civil rights protections that limit the types of data used to build data profiles or that require the auditing of algorithmic decision-making.",
+        "Label": "ALGORITHMIC ACCOUNTABILITY: A PRIMER",
+        "Parent Org": "Data & Society Research Institute",
+        "People": "Robyn Caplan: Joan Donovan: Lauren Hanson: and Jeanna Matthews",
+        "URL": "https://datasociety.net/output/algorithmic-accountability-a-primer/"
+    },
+    {
+        "Category": "certification: trust framework",
+        "Description": "The Trustable Technology Mark aims to highlight the work of those companies that put in the extra effort of building truly trustworthy devices.",
+        "Label": "The Trustable Technology Mark",
+        "People": "Peter Bihr",
+        "URL": "https://trustabletech.org/about/"
+    },
+    {
+        "Category": "Translation Diectionary",
+        "Description": "English French glossary on data protection",
+        "Label": "English French Dictionary on Data Protection",
+        "URL": "https://www.cnil.fr/en/english-french-glossary-data-protection"
+    },
+    {
+        "Label": "B Corporation",
+        "Parent Org": "B Corporation",
+        "URL": "https://bcorporation.net/certification"
+    },
+    {
+        "Activities": "Identity",
+        "Label": "WorldBank  Identity Principles",
+        "URL": "http://documents.worldbank.org/curated/en/213581486378184357/Principles-on-identification-for-sustainable-development-toward-the-digital-age"
+    },
+    {
+        "Description": "Humanity has been contemptuously used by vast digital empires. Thus it is now necessary to replace these empires with decentralized networks of independent individuals: as in the first decades of the Internet. As our participation has been voluntary: no one doubts our right to take this step. But if we are to persuade as many people as possible to join together and make reformed networks possible: we should declare our reasons for wanting to replace the old.",
+        "Label": "Declaration of Digital Independence",
+        "URL": "https://larrysanger.org/2019/06/declaration-of-digital-independence/"
+    },
+    {
+        "Label": "Privacy Tech White Paper",
+        "URL": "https://www.anewgovernance.org/executive-summary-privacytech-white-paper/"
+    },
+    {
+        "Description": "The Collaborative on SDG Data Interoperability will continue to build and maintain the Guide in this electronic space as it develops as a tool: adding new modules and examples as well as ancillary materials to help raise awareness of its existence and usability.It is hoped that new synergies will form between data producers: publishers: users: and those providing capacity building and training. In this way: the guidance set out within the Guide can be incorporated into existing training materials and modules: and a consistent approach to the system-wide improvement of data interoperability can start to become a reality in the development sector.",
+        "Label": "UN Data Interoperability Guide",
+        "URL": "https://unstats.un.org/wiki/display/InteropGuide/Home"
+    },
+    {
+        "Description": "Papers",
+        "Label": "CINL",
+        "URL": "https://www.cnil.fr/en/media"
+    },
+    {
+        "Label": "Open Data Kit Code of Conduct",
+        "URL": "https://github.com/opendatakit/governance/blob/master/CODE-OF-CONDUCT.md"
+    },
+    {
+        "Label": "ICO Data Sharing Code of Practice",
+        "URL": "https://ico.org.uk/media/about-the-ico/consultations/2615361/data-sharing-code-for-public-consultation.pdf"
+    },
+    {
+        "Label": "Privacy Patterns",
+        "URL": "https://privacypatterns.org/patterns/"
+    },
+    {
+        "Label": "A tiered-layered-staged model for informed consent in personal genome testing",
+        "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3658183/"
+    },
+    {
+        "Label": "Data Transfer Project Overview and Fundamentals",
+        "URL": "https://datatransferproject.dev/dtp-overview.pdf"
+    },
+    {
+        "Description": "The Safe Face Pledge is an opportunity for organizations to make public commitments towards mitigating the abuse of facial analysis technology. This historic pledge prohibits lethal use of the technology: lawless police use: and requires transparency in any government use.",
+        "Label": "Safe Face Pledge",
+        "Parent Org": "Algorithmic Justice League;  the Center on Technology & Privacy at Georgetown Law",
+        "URL": "https://www.safefacepledge.org"
+    },
+    {
+        "Label": "A people's guide to AI",
+        "Parent Org": "Allied Media Project",
+        "URL": "https://alliedmedia.org/peoples-ai#"
+    },
+    {
+        "Label": "Design Justice Principles",
+        "URL": "https://designjusticenetwork.org/read-the-principles"
+    },
+    {
+        "Description": "Our Data Bodies (ODB) has conducted research and produced a workbook of popular education activities focused on data: surveillance: and community safety to co-create and share knowledge: analyses: and tools for data justice and data access for equity. We hope that our work will enhance trusted models of community health and safety and help illuminate the differences between being safe and being secure.",
+        "Label": "Our Data Bodies Playbook",
+        "URL": "https://alliedmedia.org/news/2019/02/07/our-data-bodies-playbook-out"
+    },
+    {
+        "Label": "MOre then Code Database",
+        "URL": "https://morethancode.cc/orglist/"
+    },
+    {
+        "Label": "Information Fiduciary Consortium",
+        "URL": "https://berkmancenter.github.io/datatransparency/ifc-brief.pdf"
+    },
+    {
+        "Label": "Strategic Plan: Trustless Computing Certification Body and the Seevik Net Ecosystem",
+        "URL": "https://static1.squarespace.com/static/59c38d4c9f8dcee4a34ddcf6/t/5d96233db2c2e2229198da4d/1570120517291/tca-tccb-strategic-plan.pdf"
+    },
+    {
+        "Label": "The Tech Pledge",
+        "URL": "https://www.techpledge.org/#!"
+    },
+    {
+        "Label": "NIST Privacy Framework",
+        "URL": "https://www.nist.gov/privacy-framework"
+    },
+    {
+        "Label": "Network Advertising Initiative Code of Conduct",
+        "Parent Org": "Network Advertising Initiative",
+        "URL": "https://www.networkadvertising.org/sites/default/files/nai_code2018.pdf"
+    },
+    {
+        "Description": "To provide a standard whereby product (i.e. goods and services) designers and providers can demonstrate through consumer protection fulfilling the need to protect consumers from fraud: ransom demands: and other forms of privacy invasion and privacy breaking exploits resulting from lost and stolen personal data and high-jacking of consumer devices. Particularly of concern is the protection of children and the more vulnerable consumer.",
+        "Label": "Consumer protection: Privacy by design for consumer goods and services",
+        "Parent Org": "COPOLCO",
+        "URL": "https://iapp.org/media/pdf/resource_center/ISO%20NWIP%20(Privacy%20by%20design%20for%20consumer%20goods%20and%20services).pdf"
+    },
+    {
+        "URL": "https://www.iso.org/files/live/sites/isoorg/files/store/en/PUB100433.pdf"
+    },
+    {
+        "Label": "CAPrice - Collective Awareness Platform for Privacy Concerns and Expectations Video",
+        "URL": "https://youtu.be/4L8gOfU9MXg"
+    },
+    {
+        "Label": "IDS REFERENCE ARCHITECTURE MODEL: INDUSTRIAL DATA SPACE",
+        "Parent Org": "International Data Spaces Association",
+        "URL": "https://www.internationaldataspaces.org/wp-content/uploads/dlm_uploads/2018/04/InternationalDataSpacesAssociation_ReferenzArchitecture2.0.pdf",
+        "Version or Edition": "Version 2.0"
+    },
+    {
+        "Label": "INDUSTRIAL DATA SPACE"
+    },
+    {
+        "Github Profile": "https://github.com/raisely/NoHarm",
+        "Label": "Do No Harm Open Source License",
+        "URL": "https://github.com/raisely/NoHarm"
+    },
+    {
+        "Description": "COEL is a hierarchical taxonomy of everyday human life events. It provides a privacy-by-design framework for collecting and processing behavioral data that is uniquely suited to the transparent use of dynamic data for personalized digital services: IoT applications where devices are collecting information about identifiable individuals: and the coding of behavioral data in identity solutions.",
+        "Label": "Classification of Everyday Living V1.0 COEL",
+        "URL": "http://docs.oasis-open.org/coel/COEL/v1.0/cs02/COEL-v1.0-cs02.pdf"
+    },
+    {
+        "Description": "COELATION model visualized COEL",
+        "Label": "Visualizing Life",
+        "URL": "https://coelition.org/business/resources/visualising-life/"
+    },
+    {
+        "Label": "B Corporation",
+        "Purpose": "Certification",
+        "URL": "https://bcorporation.net/certification"
+    },
+    {
+        "Category": "Paper",
+        "Description": "Workshops: collaborative whitepapers to advance the conversation.",
+        "Label": "RWoT PAPERS",
+        "Parent Org": "Rebooting the Web of Trust",
+        "URL": "https://www.weboftrust.info/"
+    },
+    {
+        "Description": "Research: Papers",
+        "Label": "Data & Society Research Institute",
+        "URL": "https://datasociety.net/"
+    },
+    {
+        "Description": "Research: Papers",
+        "Label": "Alessandro Acquisti",
+        "URL": "https://www.heinz.cmu.edu/~acquisti/papers.htm#TechnicalReports"
+    },
+    {
+        "Label": "Algorythmic Justice League Videos",
+        "Parent Org": "Algorythmic Justice League",
+        "URL": "https://www.ajlunited.org/resources"
+    },
+    {
+        "Description": "VIDEOS",
+        "Label": "Film Festival by Auditing Algory",
+        "URL": "http://auditingalgorithms.science/?p=264"
+    },
+    {
+        "Label": "Consumer Standards Resources",
+        "URL": "https://www.iso.org/consumer-standards-resources.html"
+    },
+    {
+        "Label": "Usable Privacy Project has tones of publications.",
+        "URL": "https://usableprivacy.org/publications"
+    },
+    {
+        "Label": "Big Brother Watch",
+        "URL": "https://bigbrotherwatch.org.uk/research-briefings/"
+    }
+]

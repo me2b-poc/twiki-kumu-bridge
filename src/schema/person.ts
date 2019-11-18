@@ -3,16 +3,16 @@ import { mappers } from '../mappers'
 
 export const inbound : any = {
   "Name" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.label()
   },
   "Bio" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.skip()
   },
   "Website" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Website')
   },
   "Organization" : {
-    "kumu": mappers.default('')
+    "kumu": mappers.string('Parent Org')
   },
   "Working Group" : {
     "kumu": mappers.default('')

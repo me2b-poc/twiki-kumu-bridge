@@ -1,9 +1,8 @@
 #!/bin/bash
 if tsc; then
-	rm -rf output/nodes/*
-	rm -rf output/maps/*
-	#./bin/convert
+	rm -rf output/*
 	./init.sh
-	./bin/pub-anal
+	./bin/convert
+	#./bin/pub-anal
 	#./bin/lookup IEEE
 fi
